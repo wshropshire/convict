@@ -1,6 +1,6 @@
 # COpy Number Variant quantifICation Tool (CONVICT) 
 
-The purpose of CONVICT is to estimate gene copy number variants of interest using short- or long-reads. This is accomplished through querying a target gene database of interest and calculating the ratio of coverage depths between the aforementioned target gene hits and a user provider set of housekeeping and/or control genes (e.g. cgMLST schema). Regions of high variance in coverage depths of open reading frames (e.g. 5' and 3' ends) are controlled through a binning approach that measures coefficient of variation (CV) per binned ORF region and removes regions iteratively that contribute the greatest variance in coverage depth (CV>0.5) relative to overall mean ORF coverage depth. The default databases currently used are ResFinder (Accessed 2021-11-09) and the KmerFinder_db; users have the option to provide an optional target or species database. KmerFinder_db must be downloaded through the Center for Genomic Epidemiology (CGE)(https://bitbucket.org/genomicepidemiology/kma/src/master/) ftp server with instructions on their main branch. The primary output is an estimate of normalized coverage depths in sample_convict_results.tsv. 
+The purpose of CONVICT is to estimate gene copy number variants of interest using short- or long-reads. This is accomplished through querying a target gene database of interest and calculating the ratio of coverage depths between the aforementioned target gene hits and a user provider set of housekeeping and/or control genes (e.g. cgMLST schema). Regions of high variance in coverage depths of open reading frames (e.g. 5' and 3' ends) are controlled through a binning approach that measures coefficient of variation (CV) per binned ORF region and removes regions iteratively that contribute the greatest variance in coverage depth (CV>0.5) relative to overall mean ORF coverage depth. The default databases currently used are ResFinder (Accessed 2021-11-09) and the KmerFinder_db; users have the option to provide an optional target or species database. KmerFinder_db must be downloaded through the [Center for Genomic Epidemiology (CGE)](https://bitbucket.org/genomicepidemiology/kma/src/master/) ftp server with instructions on their main branch. The primary output is an estimate of normalized coverage depths in sample_convict_results.tsv. 
 
 ## Author
 
@@ -24,7 +24,7 @@ and Python3 packages:
 You can test other versions, but there is no guarantee that they will behave well with convict.py 
 My future to-do list is create a docker container and/or a bespoke Conda package.
 
-kma (KMA-1.3.24a) and kmerresistance (KmerResistance-2.2.0) can be downloaded with instructions here(https://bitbucket.org/genomicepidemiology/kma/src/master/) and here(https://bitbucket.org/genomicepidemiology/kmerresistance/src/master/) respectively. 
+kma (KMA-1.3.24a) and kmerresistance (KmerResistance-2.2.0) can be downloaded with instructions [here](https://bitbucket.org/genomicepidemiology/kma/src/master/) and [here](https://bitbucket.org/genomicepidemiology/kmerresistance/src/master/) respectively. 
 
 This GitHub repository includes ResFinder database that has already been KMA indexed. If using a customary target gene database or species database, you must though use kma index first on your nucleotide fasta file and/or target database of interest: 
 
