@@ -52,7 +52,7 @@ def run_conditions():
         frame['filename'] = tsv.name
         data.append(frame)
     merge_df = pd.concat(data, ignore_index=True)
-    pivot_cnv = merge_df.pivot(index='filename', columns='cluster_label', values=args.column)
+    pivot_cnv = merge_df.pivot(index='filename', columns='ID', values=args.column)
     results = '{0}/{1}_concatenated_results.tsv'.format(outdir, prefix)
     results1 = '{0}/{1}_{2}_results.tsv'.format(outdir, prefix, args.column)
     merge_df.to_csv(results, sep='\t')
