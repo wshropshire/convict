@@ -19,7 +19,6 @@ These are the current dependencies that I have installed through conda to run th
 and Python3 packages:
 * biopython (1.79)
 * pandas (1.4.0)
-* numpy (1.22.1)
 
 You can test other versions, but there is no guarantee that they will behave well with convict.py 
 My future to-do list is create a docker container and/or a bespoke Conda package.
