@@ -29,8 +29,10 @@ kma (KMA-1.3.24a) and kmerresistance (KmerResistance-2.2.0) can be downloaded wi
 This GitHub repository includes ResFinder database that has already been KMA indexed. If using a customary target gene database or species database, you must though use kma index first on your nucleotide fasta file and/or target database of interest: 
 
 ```
-kma index -i <species_db.fasta> -o <species_db>
+kma index -i <species_db.fasta> -o <species_db> -Sparse ATG
 ```
+
+Note that the kma species database needs to be sparse indexed for kmerresistance to properly work. Please indicate the absolute pathway of this indexed database in the convict python script. 
 
 ## Usage
 An example usage with short reads:
