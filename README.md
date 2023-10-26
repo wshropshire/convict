@@ -16,7 +16,9 @@ These are the current dependencies that I have installed through conda to run th
 * bbmap (38.93)
 * bcftools (1.14)
 * bedtools (2.30.0)
+
 and Python3 packages:
+
 * biopython (1.79)
 * pandas (1.4.0)
 
