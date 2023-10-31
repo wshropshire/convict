@@ -28,12 +28,14 @@ My future to-do list is create a docker container and/or a bespoke Conda package
 kma (KMA-1.3.24a) and kmerresistance (KmerResistance-2.2.0) can be downloaded with instructions [here](https://bitbucket.org/genomicepidemiology/kma/src/master/) and [here](https://bitbucket.org/genomicepidemiology/kmerresistance/src/master/) respectively. 
 
 This GitHub repository includes ResFinder database that has already been KMA indexed. If using a customary target gene database or species database, you must though use kma index first on your nucleotide fasta file and/or target database of interest: 
+```
+kma index -i <target_db.fasta> -o <target_db> 
+```
 
+Note that the kma species database needs to be sparse indexed for kmerresistance to properly work. Please indicate the absolute pathway of this indexed database in the convict python script:
 ```
 kma index -i <species_db.fasta> -o <species_db> -Sparse ATG
 ```
-
-Note that the kma species database needs to be sparse indexed for kmerresistance to properly work. Please indicate the absolute pathway of this indexed database in the convict python script. 
 
 ## Usage
 An example usage with short reads:
